@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: CI
 
 on:
   push:
@@ -12,8 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
+    - name: nginx
       run: |
        cd /usr/share/nginx/html
        sudo rm -rf index.html
-       mv: /home/ec2-user/home/_work/ec2_first/ec2_first/first/*.html /usr/share/nginx/html/
+       mv /home/ec2-user/home/_work/ec2_first/ec2_first/first/*.html /usr/share/nginx/html/
